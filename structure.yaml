@@ -1,0 +1,38 @@
+structure:
+  root_dirs:
+    - cmd
+    - pkg
+    - configs
+    - deployments
+    - tests
+    - docs
+    - api
+    - internal
+
+  domain_dirs:
+    - models
+    - repositories
+    - services
+    - events
+    - exceptions
+
+  application:
+    dirs:
+      - commands
+      - queries
+      - handlers
+      - validators
+
+  infrastructure:
+    dirs:
+      - database
+      - messaging
+      - cache
+      - logging
+
+  interfaces:
+    dirs:
+      - http
+      - grpc
+      - cli
+      - events
