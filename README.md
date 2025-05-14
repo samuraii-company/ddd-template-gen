@@ -1,51 +1,53 @@
 # 🧱 ddd-template-gen
 
-Генератор структуры проекта в стиле **Domain-Driven Design (DDD)** с поддержкой **Go** и **Python**. Позволяет создавать только указанные в YAML-файле директории и модули — никакой лишней генерации.
+A **Domain-Driven Design (DDD)** project structure generator with support for Go and Python.
+
+Creates only directories and modules specified in the YAML configuration file — no unnecessary generation.
 
 ---
 
-## 🚀 Возможности
+## 🚀 Features
 
-- ✅ Поддержка **Go** и **Python**
-- ✅ Генерация строго по YAML-конфигурации
-- ✅ Чистая структура DDD с разбивкой на слои
-- ✅ Автоматическое добавление `main.go` / `main.py` в точке входа проекта
+- ✅ **Go** and **Python** support
+- ✅ Generation strictly based on YAML configuration
+- ✅ Clean DDD structure with layer separation
+- ✅ Automatic `main.go` / `main.py` creation at project entry point
 
 ---
 
-## 🔧 Установка
+## 🔧 Installation
 
-Соберите бинарный файл:
+Build the binary:
 
 ```bash
 go build -o dddgen
 ```
 
-## 📦 Использование
+## 📦 Usage
 
 ./dddgen <language> <project-name> [config.yaml]
 
-| Аргумент         | Описание                                       |
+| Argument         | Description                                       |
 | ---------------- | ---------------------------------------------- |
-| `language`       | Язык проекта: `go` или `python`                |
-| `project-name`   | Имя создаваемой директории проекта             |
-| `structure.yaml` | *(опционально)* Путь к YAML-файлу конфигурации |
+| `language`       | Project language: `go` or `python`             |
+| `project-name`   | Name of the project directory to be created    |
+| `structure.yaml` | *(optional)* Path to YAML configuration file     |
 
 
-**Примеры**
+**Examples**
 
-**Создание проекта на Go со структурой по умолчанию:**
+**Create a Go project with default structure:**
 
 ```bash
 ./dddgen go myproject
 ```
 
-**Создание Python-проекта по кастомному YAML:**
+**Create a Python project with custom YAML configuration:**
 ```bash
-./dddgen python awesome_project config.yaml
+./dddgen python awesome_project structure.yaml
 ```
 
-## 🧾 Пример YAML-конфигурации
+## 🧾 Example YAML Configuration
 
 ```bash 
 structure:
@@ -88,7 +90,7 @@ structure:
       - events
 ```
 
-## 🗂 Пример сгенерированной структуры
+## 🗂 Example Generated Structure
 
 ```bash 
 project/
@@ -111,5 +113,4 @@ project/
 │   │   └── database/
 │   └── interfaces/
 │       └── http/
-└── README.md
 ```
